@@ -1,17 +1,28 @@
 # avvatars
 
+[![npm](https://img.shields.io/npm/v/avvatars)](https://www.npmjs.com/package/avvatars)
+[![GitHub](https://img.shields.io/github/stars/visualizevalue/avvatars)](https://github.com/visualizevalue/avvatars)
+
 A tiny library for generating geometric avatars as SVGs.
 
 ## Install
 
 ```bash
+npm install avvatars
+```
+
+```bash
 pnpm add avvatars
+```
+
+```bash
+yarn add avvatars
 ```
 
 ## Usage
 
 ```typescript
-import { avvatar } from 'avvatars'
+import { avvatar, avvatarDataUri } from 'avvatars'
 
 // Generate an avatar from an Ethereum address
 const svg = avvatar({
@@ -26,7 +37,7 @@ const dataUri = avvatarDataUri({ seed: '0x...' })
 
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
-| `seed` | `string` | random | Seed string (e.g., Ethereum address) |
+| `seed` | `string` | random | Seed string (e.g., Ethereum address, ENS name) |
 | `size` | `number` | `100` | Output size in pixels |
 | `gridSize` | `number` | `5` | Grid resolution (4-8 recommended) |
 | `foreground` | `string` | `#000000` | Foreground color |
