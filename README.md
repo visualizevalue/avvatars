@@ -5,13 +5,13 @@ A tiny library for generating geometric avatars as SVGs.
 ## Install
 
 ```bash
-pnpm add @visualizevalue/avvatars
+pnpm add @jckbtchr/avvatars
 ```
 
 ## Usage
 
 ```typescript
-import { avvatar } from '@visualizevalue/avvatars'
+import { avvatar } from '@jckbtchr/avvatars'
 
 // Generate an avatar from an Ethereum address
 const svg = avvatar({

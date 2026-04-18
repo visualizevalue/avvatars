@@ -1,5 +1,5 @@
 {
-  "name": "@visualizevalue/avvatars",
+  "name": "@jckbtchr/avvatars",
   "version": "0.1.0",
   "description": "A tiny library for generating geometric avatars as SVGs",
   "main": "./dist/index.js",
