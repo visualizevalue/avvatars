@@ -36,10 +36,6 @@ const seed = '0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045'
   writeFileSync(join(outDir, `grid-${gridSize}.svg`), svg)
 })
 
-// Rounded corners
-const rounded = avvatar({ seed, rounded: true, size: 200 })
-writeFileSync(join(outDir, 'rounded.svg'), rounded)
-
 // Inverted colors
 const inverted = avvatar({
   seed,

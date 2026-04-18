@@ -5,7 +5,6 @@ export interface SVGOptions {
   foreground?: string
   background?: string
   padding?: number
-  rounded?: boolean
 }
 
 /**
@@ -17,14 +16,12 @@ export function renderSVG(pattern: Pattern, options: SVGOptions = {}): string {
     foreground = '#000000',
     background = '#ffffff',
     padding = 0.1,
-    rounded = false,
   } = options
 
   const { cells, gridSize } = pattern
   const paddingPx = size * padding
   const innerSize = size - paddingPx * 2
   const cellSize = innerSize / gridSize
-  const radius = rounded ? cellSize * 0.15 : 0
 
   let paths = ''
 
@@ -33,12 +30,7 @@ export function renderSVG(pattern: Pattern, options: SVGOptions = {}): string {
       if (cells[y][x]) {
         const px = paddingPx + x * cellSize
         const py = paddingPx + y * cellSize
-
-        if (rounded) {
-          paths += `<rect x="${px}" y="${py}" width="${cellSize}" height="${cellSize}" rx="${radius}" ry="${radius}" fill="${foreground}"/>`
-        } else {
-          paths += `<rect x="${px}" y="${py}" width="${cellSize}" height="${cellSize}" fill="${foreground}"/>`
-        }
+        paths += `<rect x="${px}" y="${py}" width="${cellSize}" height="${cellSize}" fill="${foreground}"/>`
       }
     }
   }

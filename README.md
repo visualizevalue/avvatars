@@ -32,7 +32,6 @@ const dataUri = avvatarDataUri({ seed: '0x...' })
 | `foreground` | `string` | `#000000` | Foreground color |
 | `background` | `string` | `#ffffff` | Background color |
 | `padding` | `number` | `0.1` | Padding ratio (0-1) |
-| `rounded` | `boolean` | `false` | Rounded corners |
 | `symmetric` | `boolean` | `true` | Mirror pattern horizontally |
 | `optimized` | `boolean` | `false` | Use path rendering for smaller files |
 
@@ -44,9 +43,6 @@ avvatar({ seed: '0x...' })
 
 // Larger grid
 avvatar({ seed: '0x...', gridSize: 8 })
-
-// Rounded corners
-avvatar({ seed: '0x...', rounded: true })
 
 // Inverted colors
 avvatar({

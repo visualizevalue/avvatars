@@ -14,8 +14,6 @@ export interface AvvatarOptions {
   background?: string
   /** Padding ratio 0-1 (default: 0.1) */
   padding?: number
-  /** Use rounded corners */
-  rounded?: boolean
   /** Mirror pattern horizontally for symmetry */
   symmetric?: boolean
   /** Use optimized path rendering for smaller file size */
@@ -33,7 +31,6 @@ export function avvatar(options: AvvatarOptions = {}): string {
     foreground = '#000000',
     background = '#ffffff',
     padding = 0.1,
-    rounded = false,
     symmetric = true,
     optimized = false,
   } = options
@@ -45,7 +42,6 @@ export function avvatar(options: AvvatarOptions = {}): string {
     foreground,
     background,
     padding,
-    rounded,
   }
 
   return optimized
