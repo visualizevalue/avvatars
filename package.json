@@ -1,0 +1,36 @@
+{
+  "name": "@visualizevalue/avvatars",
+  "version": "0.1.0",
+  "description": "A tiny library for generating geometric avatars as SVGs",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "examples": "npx ts-node examples/generate.ts"
+  },
+  "keywords": [
+    "avatar",
+    "identicon",
+    "svg",
+    "ethereum",
+    "geometric"
+  ],
+  "author": "Visualize Value",
+  "license": "WTFPL",
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
